@@ -1,11 +1,11 @@
-import logo from '../asset/weather-logo.png'
-import locationIcon from '../asset/location-icon.png'
+import logo from "../asset/weather-logo.png";
+import locationIcon from "../asset/location-icon.png";
 
 export function Header() {
   return (
     <header>
       <div className="logo-section">
-          <img src={logo} alt="logo" />
+        <img src={logo} alt="logo" />
 
         <div className="site-name">
           <p>Weather App</p>
@@ -15,7 +15,8 @@ export function Header() {
 
       <p className="live-weather-text">
         <img src={locationIcon} alt="" />
-        Live Weather</p>
+        Live Weather
+      </p>
     </header>
   );
 }
