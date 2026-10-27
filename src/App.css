@@ -142,6 +142,10 @@ form button {
   justify-content: space-evenly;
 }
 
+.highlight-box span{
+  font-size: 2em;
+}
+
 .highlight-box p:last-child {
   font-weight: bold;
   font-size: 1.4em;
