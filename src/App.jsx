@@ -1,7 +1,7 @@
 import "./App.css";
 import { Header } from "./components/Header";
 import { TodayWeather } from "./components/TodayWeather";
-import { SearchBar } from "./components/searchBar";
+import { SearchBar } from "./components/SearchBar";
 import { Highlight } from "./components/Highlight";
 
 export function App() {
@@ -10,9 +10,9 @@ export function App() {
       <Header />
       <main>
         <TodayWeather />
+        <SearchBar />
       </main>
-      <SearchBar />
-      <Highlight/>
+      <Highlight />
     </div>
   );
 }
