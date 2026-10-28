@@ -1,6 +1,6 @@
 # Weather App
 
-A learning project that displays current weather and the daily high and low temperatures for Kathmandu, Nepal.
+A React weather app that displays current conditions and daily high and low temperatures. It starts with Kathmandu, Nepal, and lets you search for weather by city.
 
 ## Screenshot / Live Demo
 
@@ -8,10 +8,10 @@ There is no deployed live demo or application screenshot available yet. To run t
 
 ## Features
 
-- Looks up Kathmandu using the Open-Meteo Geocoding API.
-- Displays the current temperature and the day's high and low temperatures.
-- Shows a loading message while weather information is being fetched.
-- Includes a city search form and weather highlight cards in the design; these are not connected to live data yet.
+- Loads current weather for Kathmandu by default.
+- Search for a city to view its current temperature and the day's high and low temperatures.
+- Displays feels-like temperature, humidity, and wind speed in weather highlight cards.
+- Shows loading feedback while weather information is being fetched and an error message if the request fails or the city cannot be found.
 
 ## Tech Stack
 
@@ -58,12 +58,12 @@ No environment variables or API keys are required for the current version. The a
 
 ## API Overview / Usage
 
-The app makes two requests when the weather view loads:
+When the weather view loads or a city is searched, the app makes two requests:
 
-1. The Open-Meteo Geocoding API looks up the hardcoded city, Kathmandu.
-2. The Open-Meteo Forecast API uses the returned coordinates to request current temperature, relative humidity, apparent temperature, hourly wind speed, and daily high and low temperatures.
+1. The Open-Meteo Geocoding API looks up the selected city (Kathmandu by default).
+2. The Open-Meteo Forecast API uses the returned coordinates to request current temperature, relative humidity, wind speed, apparent temperature, and daily high and low temperatures.
 
-The city and country, current temperature, and daily high and low are currently displayed. Humidity, apparent temperature, and wind speed are requested but are not yet displayed in the interface. The search form is a visual placeholder and does not change the selected city yet.
+The interface displays the city and country, current temperature, daily high and low, feels-like temperature, humidity, and wind speed. The city search input must not be empty.
 
 ## Scripts and Testing
 
