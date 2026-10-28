@@ -34,7 +34,7 @@ export function TodayWeather({ value, sendData }) {
         });
      
         const getWeather = await fetch(
-          `https://api.open-meteo.com/v1/forecast?latitude=${location.latitude}&longitude=${location.longitude}&daily=temperature_2m_max,temperature_2m_min&hourly=wind_speed_10m&current=temperature_2m,relative_humidity_2m,apparent_temperature&timezone=auto`,
+          `https://api.open-meteo.com/v1/forecast?latitude=${location.latitude}&longitude=${location.longitude}&daily=temperature_2m_max,temperature_2m_min&current=temperature_2m,relative_humidity_2m,wind_speed_10m,apparent_temperature&timezone=auto`,
         );
         if (!getWeather.ok) throw new Error("Failed to fetch location");
 
@@ -48,7 +48,7 @@ export function TodayWeather({ value, sendData }) {
 
         sendData({
           humidity: weatherResult.current.relative_humidity_2m,
-          windSpeed: weatherResult.hourly.wind_speed_10m[0],
+          windSpeed: weatherResult.current.wind_speed_10m,
           apparent_temperature: weatherResult.current.apparent_temperature,
         });
       } catch (err) {
