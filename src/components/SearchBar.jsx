@@ -13,7 +13,7 @@ export function SearchBar({onSubmit}) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" placeholder="Enter city..." value={country} onChange={(e)=>{setCountry(e.target.value)}}/>
+      <input type="text" placeholder="Enter city..." value={country} onChange={(e)=>{setCountry(e.target.value)}} required/>
       <button type="submit">Search</button>
     </form>
   );

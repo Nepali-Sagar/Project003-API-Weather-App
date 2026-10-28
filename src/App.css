@@ -157,3 +157,11 @@ form button {
 }
 
 /* highlight end */
+
+.error-msg{
+  padding: 20px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border-radius: 50px;
+}
